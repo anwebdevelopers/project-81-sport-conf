@@ -7,14 +7,14 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
     //*********************************************************//
     var lazyLoad = new IntersectionObserver(
 
-        function( entries ) {
+        async function( entries ) {
 
             for ( var i = 0; i < entries.length; i++  ) {
 
                 var entry = entries[ i ]
                 var target = entry.target
 
-                 if ( entry.isIntersecting && target.hasAttribute( 'data-lazy-load' ) ) {
+                if ( entry.isIntersecting && target.hasAttribute( 'data-lazy-load' ) ) {
 
                     if ( target.nodeName === 'IMG' ) {
                         target.setAttribute( 'src', target.getAttribute( 'data-lazy-load' ) );
@@ -29,6 +29,7 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
                     lazyLoad.unobserve( target );
 
                     target.style.opacity = 1;
+
                 }
             }
         },

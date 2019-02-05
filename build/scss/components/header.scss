@@ -394,6 +394,7 @@
     }
     .header__main {
         width: auto;
+        margin-left: 5rem;
     }
     .header__title-main {
         br {
@@ -415,6 +416,9 @@
 }
 
 @media only screen and (max-width : 480px) {
+    .header__main {
+        margin-left: 0;
+    }
     .header__picture-text {
         svg {
             text {

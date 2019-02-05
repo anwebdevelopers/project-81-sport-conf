@@ -58,6 +58,7 @@ body {
     -webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	overflow-x: hidden;
 }
 
 // [ data-lazy-load ] {
@@ -77,7 +78,7 @@ body {
 
 .button {
 	@include btn;
-	padding: 2rem 4rem;
+	padding: 2rem 4rem 1.8rem 4rem;
 	border-radius: .4rem;
 	font-size: 1.8rem;
 	letter-spacing: .042em;
@@ -103,6 +104,11 @@ body {
 	line-height: 1.25;
 	font-family: 'Montserrat';
 	color: $color-title;
+}
+.title__mark {
+    background: none;
+    display: block;
+    color: $color-accent;
 }
 .text {
 	* {
@@ -185,6 +191,11 @@ body {
 @import 'components/solution.scss';
 @import 'components/advantages.scss';
 @import 'components/purpose.scss';
+// @import 'components/premium.scss';
+@import 'components/sports.scss';
+@import 'components/program.scss';
+@import 'components/speakers.scss';
+@import 'components/about.scss';
 
 //@import 'build/scss/components/magnific-popup.scss';
 

@@ -1,0 +1,135 @@
+.program {
+    padding: 9rem 0 4rem 0;
+    background-color: #F7F8F9;
+    position: relative;
+    z-index: 1;
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        border: 15rem solid rgba(0,0,0,0);
+        border-bottom-color: $color-accent;
+    }
+}
+.program__table {
+
+
+    margin-top: 8rem;
+
+    overflow-x: auto;
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+
+        tr {
+            &:first-child {
+                th {
+                    border-bottom: 1px solid #C8CBD8;
+                    font-family: 'Montserrat';
+                    white-space: nowrap;
+                    // text-overflow: ellipsis;
+                    // overflow: hidden;
+                    text-transform: uppercase;
+                    color: #000;
+                    text-align: left;
+                    &:not( :first-child ) {
+                        position: relative;
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            left: .5rem;
+                            top: -.2em;
+                            transform: rotate(45deg);
+                            border: .6em solid rgba(0,0,0,0);
+                            border-bottom-color: $color-accent;
+                        }
+                    }
+                    &:first-child {
+                        padding-right: 2rem;
+                    }
+                }
+            }
+            &:not( :first-child ) {
+                th, td {
+                    padding-top: 5rem;
+                    // border-bottom: 1px solid #e7eaf7;
+                }
+                td {
+
+                    &:first-child {
+                        font-size: 1.25em;
+                        &:before {
+                            content: '';
+                            display: inline-block;
+                            vertical-align: baseline;
+                            width: 2rem;
+                            height: 2rem;
+                            margin-right: .5em;
+                            background-image: url("data:image/svg+xml,%3Csvg width='18' height='20' viewBox='0 0 18 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.70445 2.59082C3.88664 2.59082 0 6.47747 0 11.2953C0 16.1131 3.88664 19.9997 8.70445 19.9997C13.5223 19.9997 17.4089 16.1131 17.4089 11.2953C17.4089 6.47747 13.5223 2.59082 8.70445 2.59082ZM8.70445 18.7852C4.5749 18.7852 1.21457 15.4248 1.21457 11.2953C1.21457 7.16573 4.5749 3.80541 8.70445 3.80541C12.834 3.80541 16.1943 7.16573 16.1943 11.2953C16.1943 15.4248 12.834 18.7852 8.70445 18.7852Z' fill='%23666979'/%3E%3Cpath d='M12.996 13.6034L9.31174 10.9719V6.51842C9.31174 6.19453 9.02834 5.91113 8.70446 5.91113C8.38057 5.91113 8.09717 6.19453 8.09717 6.51842V11.2958C8.09717 11.4982 8.17815 11.6601 8.3401 11.7816L12.2672 14.5751C12.3887 14.6561 12.5101 14.6966 12.6316 14.6966C12.834 14.6966 12.996 14.6156 13.1174 14.4537C13.3198 14.1703 13.2794 13.7654 12.996 13.6034Z' fill='%23666979'/%3E%3Cpath d='M6.76116 1.21457H10.6478C10.9717 1.21457 11.2551 0.931174 11.2551 0.607287C11.2551 0.283401 10.9717 0 10.6478 0H6.76116C6.43727 0 6.15387 0.283401 6.15387 0.607287C6.15387 0.931174 6.43727 1.21457 6.76116 1.21457Z' fill='%23666979'/%3E%3C/svg%3E%0A");
+                            background-position: 50% 50%;
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                }
+            }
+            &:not( :first-child ):not( :last-child ) {
+                th, td {
+                    border-bottom: 1px solid #e7eaf7;
+                }
+            }
+            th, td {
+                vertical-align: top;
+                padding-bottom: 5rem;
+
+                &:not( :first-child ) {
+                    padding-left: 3rem;
+                }
+                b {
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+.program__button {
+    margin-top: 10rem;
+    text-align: center;
+}
+
+@media only screen and (max-width : 1200px) {
+    .program__table {
+        font-size: 1.8rem;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    .program__table {
+        font-size: 1.7rem;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    .program__table {
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (max-width : 640px) {
+    // .program__table {
+    //     font-size: 1.5rem;
+    // }
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}
