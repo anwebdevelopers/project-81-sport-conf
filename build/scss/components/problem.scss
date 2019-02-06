@@ -41,6 +41,12 @@
     flex: 0 1 auto;
     width: 59%;
     margin: -7rem -4% 0 2%;
+    source {
+        position: absolute;
+        z-index: -1;
+        width: 1px;
+        height: 1px;
+    }
     img {
         max-width: 100%;
         width: auto;

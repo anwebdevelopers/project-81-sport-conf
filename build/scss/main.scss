@@ -8,29 +8,29 @@
 *:focus:-ms-input-placeholder      {color: transparent}
 
 *::-webkit-input-placeholder {
-	color: #666;
+	color: #9497A8;
 	opacity: 1;
 }
 *:-moz-placeholder {
-	color: #666;
+	color: #9497A8;
 	opacity: 1;
 }
 *::-moz-placeholder {
-	color: #666;
+	color: #9497A8;
 	opacity: 1;
 }
 
 *:-ms-input-placeholder {
-	color: #666;
+	color: #9497A8;
 	opacity: 1;
 }
 body input:focus:required:invalid,
 body textarea:focus:required:invalid {
-	color: #666;
+	color: #9497A8;
 }
 body input:required:valid,
 body textarea:required:valid {
-	color: #666;
+	color: #9497A8;
 }
 *,
 *:before,
@@ -195,7 +195,11 @@ body {
 @import 'components/sports.scss';
 @import 'components/program.scss';
 @import 'components/speakers.scss';
+@import 'components/draft.scss';
 @import 'components/about.scss';
+@import 'components/cost.scss';
+@import 'components/place.scss';
+
 
 //@import 'build/scss/components/magnific-popup.scss';
 
@@ -203,12 +207,12 @@ body {
 
 
 //Load Libs SASS
-// @import 'html/libs/animate/animate.sass';
-//@import 'html/libs/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min';
-//@import 'html/libs/superfish/dist/css/superfish';
-//@import 'html/libs/font-awesome/scss/font-awesome.scss';
-//@import 'html/libs/jQuery.mmenu/dist/css/jquery.mmenu.all';
-//@import 'html/libs/magnific-popup/dist/magnific-popup';
+// @import 'app/libs/animate/animate.sass';
+@import 'app/libs/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.scss';
+//@import 'app/libs/superfish/dist/css/superfish';
+//@import 'app/libs/font-awesome/scss/font-awesome.scss';
+//@import 'app/libs/jQuery.mmenu/dist/css/jquery.mmenu.all';
+//@import 'app/libs/magnific-popup/dist/magnific-popup';
 @media only screen and (max-width : 1400px) {
 
 }

@@ -26,6 +26,12 @@
         background-color: rgba(60, 63, 77, 0.8);
         mix-blend-mode: multiply;
     }
+    source {
+        position: absolute;
+        z-index: -1;
+        width: 1px;
+        height: 1px;
+    }
     img {
         position: absolute;
         z-index: 0;
@@ -217,7 +223,12 @@
     z-index: 2;
     flex: 0 0 auto;
     width: 58%;
-
+    source {
+        position: absolute;
+        z-index: -1;
+        width: 1px;
+        height: 1px;
+    }
     img {
         display: inline-block;
         vertical-align: top;
@@ -288,6 +299,12 @@
     display: block;
     z-index: 1;
     margin: -60% 0 0 -22%;
+    source {
+        position: absolute;
+        z-index: -1;
+        width: 1px;
+        height: 1px;
+    }
     img {
         display: inline-block;
         vertical-align: top;

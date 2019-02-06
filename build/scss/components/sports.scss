@@ -13,6 +13,12 @@
     min-height: 40rem;
 
     position: relative;
+    source {
+        position: absolute;
+        z-index: -1;
+        width: 1px;
+        height: 1px;
+    }
     img {
         display: block;
         position: absolute;
@@ -35,6 +41,8 @@
     min-height: calc(100% + 14rem);
     padding: 8rem 6rem;
     background-color: $color-accent;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .sports__item {
     flex: 0 0 auto;
@@ -70,13 +78,18 @@
         content: '';
         position: absolute;
         z-index: 1;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
+        left: -1px;
+        top: -1px;
+        right: -1px;
+        bottom: -1px;
         background-color: rgba(23, 25, 33, 0.5);
     }
-
+    source {
+        position: absolute;
+        z-index: -1;
+        width: 1px;
+        height: 1px;
+    }
     img {
         position: absolute;
         left: -1px;
@@ -146,6 +159,13 @@
     }
     .sports__item {
         width: 50%;
+        &:nth-child(even) {
+            .sports__item-img {
+                &:before {
+                    background-color: rgba(73, 68, 39, 0.3);
+                }
+            }
+        }
     }
 }
 

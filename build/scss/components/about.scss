@@ -1,20 +1,205 @@
 .about {
     padding: 9rem 0;
-    background-color: #F7F8F9;
+    background-color: #fff;
 }
 .about__box {
     margin-top: 8rem;
+    &.owl-carousel {
+        position: relative;
+        .owl-nav {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            display: flex;
+            .owl-next,
+            .owl-prev {
+                flex: 0 0 auto;
+                width: 4.3rem;
+                height: 4.3rem;
+                // background-color: ;
+                position: relative;
+                transition: .3s;
+                outline: none;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    width: 1rem;
+                    height: 1rem;
+                    border-left: 2px solid #fff;
+                    border-top: 2px solid #fff;
+                }
+                &:hover, &:active {
+            		// color: $color-title;
+            		// background-color: $color-accent;
+            		// background-size: 100% 100%;
+            		box-shadow: 0 1rem 3rem rgba(23, 25, 33, .2);
+            	}
+            }
+            .owl-prev {
+                background-color: $color-accent;
+                &:before {
+                    transform: translate(-30%, -50%) rotate(-45deg);
+                }
+            }
+            .owl-next {
+                background-color: $color-title;
+                &:before {
+                    transform: translate(-70%, -50%) rotate(135deg);
+                }
+            }
+        }
+    }
 }
 .about__item {
     display: flex;
+    & + .about__item {
+        margin-top: 8rem;
+    }
 }
 .about__item-img {
     display: block;
     flex: 0 0 auto;
     width: 40%;
-    img {
-        max-width: 100%;
-        width: auto;
-        height: auto;
+    height: 0;
+    padding-bottom: 40%;
+    position: relative;
+    source {
+        position: absolute;
+        z-index: -1;
+        width: 1px;
+        height: 1px;
     }
+    img {
+        position: absolute;
+        z-index: 0;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        bottom: -1px;
+        left: -1px;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 448 448' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-3.05176e-05 448L448 448L8.64782e-06 -8.64783e-06L-3.05176e-05 448Z' fill='%23fff'/%3E%3C/svg%3E ");
+        background-size: contain;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+    }
+}
+.about__item-content {
+    flex: 0 0 auto;
+    width: 40%;
+    margin-left: 10%;
+    margin-bottom: 8rem;
+}
+.about__item-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $color-title;
+}
+.about__item-subtitle {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 500;
+    color: $color-title;
+}
+.about__item-text {
+    > * {
+        &:first-child {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    margin-top: 2rem;
+    font-size: 2rem;
+    line-height: 1.5;
+}
+.about__counter {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1;
+
+    display: flex;
+}
+.about__counter-current {
+    color: $color-accent;
+}
+.about__counter-amount {
+    &:before {
+        content: '/';
+        margin: 0 1rem;
+        font-family: 'Montserrat';
+    }
+}
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+    .about__item-content {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+    .about__box {
+        &.owl-carousel {
+            .owl-nav {
+                position: static;
+                left: auto;
+                float: right;
+            }
+            &:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+        }
+    }
+    .about__counter {
+        position: static;
+        left: auto;
+        bottom: auto;
+        float: left;
+    }
+    .about__item {
+        display: block;
+    }
+    .about__item-img {
+        width: auto;
+        padding-bottom: 100%;
+    }
+    .about__item-content {
+        width: auto;
+        margin-left: 0;
+        margin-top: 2rem;
+        margin-bottom: 6rem;
+    }
+}
+
+@media only screen and (max-width : 360px) {
+
 }
