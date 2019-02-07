@@ -1,7 +1,7 @@
 .header {
     padding: 3.5rem 0 8rem 0;
     color: #E6E8F5;
-    background-color: #fff;
+    background-color: #797979;
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -75,7 +75,7 @@
         content: '';
         position: absolute;
         left: 0;
-        width: 2.3rem;
+        width: 2.4rem;
         height: 2px;
         border-radius: .4rem;
         background-color: #E6E8F5;
@@ -448,5 +448,10 @@
 }
 
 @media only screen and (max-width : 360px) {
-
+    .header__nav-button {
+        &.active {
+            right: 0;
+            padding: 0 0 0 2.5rem;
+        }
+    }
 }

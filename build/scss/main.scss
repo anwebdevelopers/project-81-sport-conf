@@ -104,6 +104,7 @@ body {
 	line-height: 1.25;
 	font-family: 'Montserrat';
 	color: $color-title;
+	word-wrap: break-word;
 }
 .title__mark {
     background: none;
@@ -186,6 +187,7 @@ body {
     }
 }
 //Custom Styles Here
+@import 'components/nav.scss';
 @import 'components/header.scss';
 @import 'components/problem.scss';
 @import 'components/solution.scss';
@@ -199,7 +201,10 @@ body {
 @import 'components/about.scss';
 @import 'components/cost.scss';
 @import 'components/place.scss';
-
+@import 'components/parthners.scss';
+@import 'components/direction.scss';
+@import 'components/events.scss';
+@import 'components/footer.scss';
 
 //@import 'build/scss/components/magnific-popup.scss';
 

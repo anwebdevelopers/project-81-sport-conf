@@ -140,6 +140,16 @@
 }
 
 @media only screen and (max-width : 480px) {
+    .solution__note {
+        padding: 4rem 3rem 6rem 3rem;
+        background-size: calc(100% - 3rem) calc(100% - 3rem);
+        &:before {
+            width: 3rem;
+        }
+        &:after {
+            height: 3rem;
+        }
+    }
 
 }
 
