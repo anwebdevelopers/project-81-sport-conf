@@ -6,6 +6,9 @@
     margin-top: 8rem;
     &.owl-carousel {
         position: relative;
+        .owl-stage-outer {
+            width: 100%;
+        }
         .owl-nav {
             position: absolute;
             bottom: 0;
@@ -54,6 +57,7 @@
 }
 .about__item {
     display: flex;
+
     & + .about__item {
         margin-top: 8rem;
     }

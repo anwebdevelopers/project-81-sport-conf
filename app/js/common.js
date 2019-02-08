@@ -2,8 +2,6 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
 
     'use strict';
 
-
-
     /*******************************************************/
     //MENU
     /*******************************************************/
@@ -18,11 +16,9 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
             e.stopPropagation();
             if ( buttonNav.classList.contains( 'active' ) ) {
                 buttonNav.classList.remove('active');
-                // elemNav.style.display = '';
                 elemNav.classList.remove('active');
             } else {
                 buttonNav.classList.add( 'active' );
-                // elemNav.style.display = 'block';
                 elemNav.classList.add('active');
             }
         } );
@@ -40,6 +36,15 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
                 elemNav.classList.remove('active');
             }
         } );
+
+        const navMenuElems = document.querySelectorAll( '.nav__menu a' );
+
+        for ( let i = 0; i < navMenuElems.length; i++ ) {
+            navMenuElems[ i ].addEventListener( 'click', function( event ) {
+                buttonNav.classList.remove('active');
+                elemNav.classList.remove('active');
+            } );
+        }
 
     } () );
 
@@ -93,7 +98,7 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
             lazyLoadImgElems[ i ].style.opacity = 0;
             lazyLoadImgElems[ i ].style.transition = '1s';
         }
-        
+
     } () );
 
     //*********************************************************//
@@ -120,6 +125,15 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
             $( event.target ).find( '.about__counter-current' ).text( $( event.target ).find( '.owl-item.active [ data-item-counter ]' ).attr( 'data-item-counter' ) )
         }
     } );
+
+    /*******************************************************/
+    //FANCYBOX POPUP
+    /*******************************************************/
+    ( function() {
+
+        $.fancybox.defaults.autoFocus = false;
+
+    } () );
 
     //*********************************************************//
     //YANDEX MAP
@@ -207,5 +221,29 @@ document.addEventListener( 'DOMContentLoaded', function( event ) {
 
     } () );
 
+    /*******************************************************/
+    //SCROLL
+    /*******************************************************/
+    $( '.scroll' ).click( function( event ) {
+        event.preventDefault();
+        const thisSect = $( $( this ).attr( 'href' ) ).offset().top;
+        $( 'html, body' ).animate( { scrollTop: thisSect }, ( ( Math.abs( thisSect - $(window ).scrollTop() ) * 0.1 ) + 600 ), 'swing' );
+    } );
+
+    /*******************************************************/
+    //REMOVE PRELOADER
+    /*******************************************************/
+    ( function() {
+        const preloader = document.querySelector( '#preloader' );
+
+        setTimeout( function() {
+
+            preloader.style.visibility = 'hidden';
+            preloader.style.zIndex = -999;
+            preloader.style.opacity = 0;
+
+        }, 2000 );
+
+    } () );
 
 } );

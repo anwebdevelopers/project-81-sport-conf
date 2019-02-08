@@ -64,15 +64,25 @@
         break-inside: avoid;
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
         margin-top: .5rem;
         a {
-            display: block;
             flex: 0 0 auto;
+            display: inline-block;
+            vertical-align: top;
+            padding: .2rem .6rem;
+            border-radius: 1px;
+
             text-decoration: none;
             color: inherit;
+            background-image: linear-gradient( $color-accent, $color-accent );
+            background-position: 0 0;
+            background-size: 100% 0;
+            background-repeat: no-repeat;
             transition: .3s;
             &:hover, &:active {
-                color: $color-accent;
+                color: $color-title;
+                background-size: 100% 100%;
             }
         }
     }

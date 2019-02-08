@@ -41,6 +41,7 @@ body textarea:required:valid {
 html {
 	height: 100%;
 	font-size: 10px;
+	// scroll-behavior: smooth;
 }
 body {
 	position: relative;
@@ -64,6 +65,7 @@ body {
 // [ data-lazy-load ] {
 //     opacity: 0;
 // }
+
 
 .container {
 	max-width: 1280px;
@@ -205,6 +207,7 @@ body {
 @import 'components/direction.scss';
 @import 'components/events.scss';
 @import 'components/footer.scss';
+@import 'components/popup.scss';
 
 //@import 'build/scss/components/magnific-popup.scss';
 
@@ -214,6 +217,7 @@ body {
 //Load Libs SASS
 // @import 'app/libs/animate/animate.sass';
 @import 'app/libs/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.scss';
+@import 'app/libs/fancybox/dist/jquery.fancybox.scss';
 //@import 'app/libs/superfish/dist/css/superfish';
 //@import 'app/libs/font-awesome/scss/font-awesome.scss';
 //@import 'app/libs/jQuery.mmenu/dist/css/jquery.mmenu.all';

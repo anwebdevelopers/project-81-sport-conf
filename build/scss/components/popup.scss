@@ -1,0 +1,104 @@
+.popup.fancybox-content {
+    max-width: 52rem;
+    // margin: 0 auto;
+    padding: 7rem 9rem;
+    color: #fff;
+    background-color: $color-title;
+}
+.popup__form-title {
+    font-weight: 700;
+    color: $color-accent;
+}
+.popup__form-field {
+    @include input;
+    margin-top: 3rem;
+    width: 100%;
+    height: 4.5rem;
+    padding: 1.25rem 0;
+    // border-bottom: 1px solid currentColor;
+    font-size: 1.8rem;
+    background-image: linear-gradient($color-accent,$color-accent), linear-gradient(currentColor,currentColor);
+    background-position: 0 100%;
+    background-size:0 1px, 100% 1px;
+    background-repeat: no-repeat;
+    color: #9497A8;
+    transition: .3s;
+    &:hover,&:focus {
+        background-size:  100% 1px,100% 1px;
+    }
+}
+.popup__form-check {
+    display: block;
+    margin-top: 3rem;
+    input {
+        display: none;
+        &:checked + span {
+            &:before {
+                transform: rotate(-55deg);
+                border-color: $color-accent;
+                border-width:3px;
+                border-top-color: rgba(0,0,0,0);
+                border-right-color: rgba(0,0,0,0);
+                height: 1.1rem;
+
+            }
+        }
+        &+ span {
+            position: relative;
+            padding-left: 3rem;
+            font-size: 1.4rem;
+            color: #fff;
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: -.16em;
+                width: 1.6rem;
+                height: 1.6rem;
+                border: 1px solid currentColor;
+                transition: .3s;
+            }
+        }
+    }
+}
+.popup__form-button {
+    margin-top: 3rem;
+    text-align: center;
+    .button {
+
+        color: #000;
+        background-color: $color-accent;
+        background-image: linear-gradient(#fff, #fff);
+    }
+}
+.popup__form-text {
+    margin-top: 4rem;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+    .popup.fancybox-content {
+        padding: 7rem 5rem;
+    }
+}

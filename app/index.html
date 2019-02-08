@@ -24,11 +24,12 @@
 	<link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="css/main.css"></noscript>
 
+	<style>#preloader{position:fixed;z-index:1000;left:0;top:0;right:0;bottom:0;font-size:40px;font-weight:900;line-height: 1.5;letter-spacing:.075em;text-transform:uppercase;font-family:Arial, sans-serif;color:#F9DD47;background-color:#171921;transition:1s;display:flex;justify-content:center;align-items:center;}</style>
 </head>
 
 <body>
 
-
+	<div id="preloader">Спорт <br>как бизнес</div>
 
 	<header class="header">
 		<picture class="header__background">
@@ -45,24 +46,24 @@
 					<div class="nav__container container">
 						<div class="nav__box">
 							<ul class="nav__menu">
-								<li><a href="#">Проблема</a></li>
-								<li><a href="#">Решение</a></li>
-								<li><a href="#">Вам к нам, если вы...</a></li>
-								<li><a href="#">Премия</a></li>
-								<li><a href="#">Виды спорта</a></li>
-								<li><a href="#">Программа</a></li>
-								<li><a href="#">Спикеры</a></li>
-								<li><a href="#">О нас говорят</a></li>
-								<li><a href="#">Стоимость</a></li>
-								<li><a href="#">Место проведения</a></li>
-								<li><a href="#">Партнеры</a></li>
-								<li><a href="#">Дирекция</a></li>
-								<li><a href="#">Наши мероприятия</a></li>
+								<li><a href="#problem">Проблема</a></li>
+								<li><a href="#solution">Решение</a></li>
+								<li><a href="#purpose">Вам к нам, если вы...</a></li>
+								<!-- <li><a href="#">Премия</a></li> -->
+								<li><a href="#sports">Виды спорта</a></li>
+								<li><a href="#draft">Программа</a></li>
+								<li><a href="#speakers">Спикеры</a></li>
+								<li><a href="#about">О нас говорят</a></li>
+								<li><a href="#cost">Стоимость</a></li>
+								<li><a href="#place">Место проведения</a></li>
+								<li><a href="#parthners">Партнеры</a></li>
+								<li><a href="#direction">Дирекция</a></li>
+								<li><a href="#events">Наши мероприятия</a></li>
 							</ul>
 							<form class="nav__form">
 								<div class="nav__form-title">Оставьте заявку на участие</div>
 								<input type="text" class="nav__form-field" placeholder="Ваше имя">
-								<input type="text" class="nav__form-field" placeholder="Ваш телефон">
+								<input type="tel" class="nav__form-field" placeholder="Ваш телефон">
 								<input type="email" class="nav__form-field" placeholder="Ваш email">
 								<label class="nav__form-check">
 									<input type="checkbox">
@@ -89,7 +90,7 @@
 						<span class="header__title-main">Спорт <br>как бизнес</span>
 					</h1>
 					<div class="header__button">
-						<a href="#" class="button">Принять участие</a>
+						<a data-fancybox="popup" href="#popup" class="button">Принять участие</a>
 					</div>
 				</div>
 				<div class="header__picture">
@@ -118,7 +119,7 @@
 				</div>
 			</div>
 			<div class="header__bottom">
-				<a href="#" class="header__scroll-button"></a>
+				<a href="#problem" class="header__scroll-button scroll"></a>
 				<figure class="header__logo">
 					<img data-lazy-load="img/logo.svg" src="img/0.svg" alt="">
 				</figure>
@@ -126,7 +127,7 @@
 		</div>
 	</header>
 
-	<section class="problem">
+	<section id="problem" class="problem">
 		<div class="container">
 			<h2 class="title">Проблема</h2>
 			<div class="problem__box">
@@ -150,7 +151,7 @@
 		</div>
 	</section>
 
-	<section class="solution">
+	<section id="solution" class="solution">
 		<div class="container">
 			<h2 class="title">Решение</h2>
 			<div class="solution__box">
@@ -173,7 +174,7 @@
 		</div>
 	</section>
 
-	<section class="advantages">
+	<section id="advantages" class="advantages">
 		<div class="container">
 			<div class="advantages__box">
 				<figure class="advantages__item">
@@ -199,7 +200,7 @@
 		</div>
 	</section>
 
-	<section class="purpose">
+	<section id="purpose" class="purpose">
 		<div class="container">
 			<h2 class="title">Вам к нам, если вы...</h2>
 			<div class="purpose__box">
@@ -281,7 +282,7 @@
 		</picture>
 	</section> -->
 
-	<section class="sports">
+	<section id="sports" class="sports">
 		<div class="sports__head">
 			<picture class="sports__head-item">
 				<source data-lazy-load="img/img-sports-head-1.webp" srcset="img/0.svg" type="image/webp">
@@ -463,11 +464,11 @@
 		</div>
 	</section> -->
 
-	<section class="speakers">
+	<section id="speakers" class="speakers">
 		<div class="container">
 			<h2 class="title">Спикеры</h2>
 			<div class="speakers__box">
-				<a href="#" class="speakers__item">
+				<a data-fancybox="speaker1" href="#speaker1" class="speakers__item">
 					<picture class="speakers__item-img">
 						<source data-lazy-load="img/img-speakers.webp" srcset="img/0.svg" type="image/webp">
 						<img data-lazy-load="img/img-speakers.png" src="img/0.svg" alt="">
@@ -475,22 +476,24 @@
 					<div class="speakers__item-title">Константин Константинопольский</div>
 					<div class="speakers__item-text">Директор по развитию компании Мегафон</div>
 					<div class="speakers__item-hidden">
-						<div class="speakers__popup">
-							 <div class="speakers__popup-person">
-								 <picture class="speakers__popup-img">
- 									<source data-lazy-load="img/img-speakers.webp" srcset="img/0.svg" type="image/webp">
- 									<img data-lazy-load="img/img-speakers.png" src="img/0.svg" alt="">
- 								</picture>
- 								<div class="speakers__popup-title">Константин Константинопольский</div>
- 								<div class="speakers__popup-text">Директор по развитию компании Мегафон</div>
-							 </div>
-							 <div class="speakers__popup-content">
-							 	<p>Как менять жизнь людей через спорт? Директор adidas Academy поделится примером создания благополучия для сотрудников компании. Опыт adidas Academy применим в любой спортивной организации. Насколько важно Ваше образование при запуске проекта: директор adidas Academy - Кандидат медицинских наук, врач-психиатр, психотерапевт, держатель Европейского и Всемирного Сертификата по Психотерапии, член совета директоров Всемирной Ассоциации Позитивной и Транскультуральной Психотерапии (WAPP), международный тренер по Позитивной и Транскультуральной Психотерапии, автор книг и научных статей. Вы узнаете, что нужно для успешного запуска проекта и как донести до людей, что занятия спортом помогают им достигать целей в бизнесе. Итогом мастер-класса Максима Гончарова станет формирование правильного посыла и умение донести до Ваших клиентов то, что занятия именно Вашим видом спорта, именно в Вашем спортивном сооружении запустят позитивные изменения в жизни каждого человека, через энергию спорта.</p>
-							 </div>
+						<div id="speaker1" class="speakers__popup">
+							<div class="speakers__popup-box">
+								<div class="speakers__popup-person">
+   								    <picture class="speakers__popup-img">
+    									<source data-lazy-load="img/img-speakers.webp" srcset="img/0.svg" type="image/webp">
+    									<img data-lazy-load="img/img-speakers.png" src="img/0.svg" alt="">
+    								</picture>
+    								<div class="speakers__popup-title">Константин Константинопольский</div>
+    								<div class="speakers__popup-text">Директор по развитию компании Мегафон</div>
+   							 </div>
+   							 <div class="speakers__popup-content">
+   							 	<p>Как менять жизнь людей через спорт? Директор adidas Academy поделится примером создания благополучия для сотрудников компании. Опыт adidas Academy применим в любой спортивной организации. Насколько важно Ваше образование при запуске проекта: директор adidas Academy - Кандидат медицинских наук, врач-психиатр, психотерапевт, держатель Европейского и Всемирного Сертификата по Психотерапии, член совета директоров Всемирной Ассоциации Позитивной и Транскультуральной Психотерапии (WAPP), международный тренер по Позитивной и Транскультуральной Психотерапии, автор книг и научных статей. Вы узнаете, что нужно для успешного запуска проекта и как донести до людей, что занятия спортом помогают им достигать целей в бизнесе. Итогом мастер-класса Максима Гончарова станет формирование правильного посыла и умение донести до Ваших клиентов то, что занятия именно Вашим видом спорта, именно в Вашем спортивном сооружении запустят позитивные изменения в жизни каждого человека, через энергию спорта.</p>
+   							 </div>
+							</div>
 						</div>
 					</div>
 				</a>
-				<a href="#" class="speakers__item">
+				<a data-fancybox="speaker2" href="#speaker2" class="speakers__item">
 					<picture class="speakers__item-img">
 						<source data-lazy-load="img/img-speakers.webp" srcset="img/0.svg" type="image/webp">
 						<img data-lazy-load="img/img-speakers.png" src="img/0.svg" alt="">
@@ -498,22 +501,24 @@
 					<div class="speakers__item-title">Константин Константинопольский</div>
 					<div class="speakers__item-text">Директор по развитию компании Мегафон</div>
 					<div class="speakers__item-hidden">
-						<div class="speakers__popup">
-							 <div class="speakers__popup-person">
-								 <picture class="speakers__popup-img">
- 									<source data-lazy-load="img/img-speakers.webp" srcset="img/0.svg" type="image/webp">
- 									<img data-lazy-load="img/img-speakers.png" src="img/0.svg" alt="">
- 								</picture>
- 								<div class="speakers__popup-title">Константин Константинопольский</div>
- 								<div class="speakers__popup-text">Директор по развитию компании Мегафон</div>
-							 </div>
-							 <div class="speakers__popup-content">
-							 	<p>Как менять жизнь людей через спорт? Директор adidas Academy поделится примером создания благополучия для сотрудников компании. Опыт adidas Academy применим в любой спортивной организации. Насколько важно Ваше образование при запуске проекта: директор adidas Academy - Кандидат медицинских наук, врач-психиатр, психотерапевт, держатель Европейского и Всемирного Сертификата по Психотерапии, член совета директоров Всемирной Ассоциации Позитивной и Транскультуральной Психотерапии (WAPP), международный тренер по Позитивной и Транскультуральной Психотерапии, автор книг и научных статей. Вы узнаете, что нужно для успешного запуска проекта и как донести до людей, что занятия спортом помогают им достигать целей в бизнесе. Итогом мастер-класса Максима Гончарова станет формирование правильного посыла и умение донести до Ваших клиентов то, что занятия именно Вашим видом спорта, именно в Вашем спортивном сооружении запустят позитивные изменения в жизни каждого человека, через энергию спорта.</p>
-							 </div>
+						<div id="speaker2" class="speakers__popup">
+							<div class="speakers__popup-box">
+								<div class="speakers__popup-person">
+   								    <picture class="speakers__popup-img">
+    									<source data-lazy-load="img/img-speakers.webp" srcset="img/0.svg" type="image/webp">
+    									<img data-lazy-load="img/img-speakers.png" src="img/0.svg" alt="">
+    								</picture>
+    								<div class="speakers__popup-title">Константин Константинопольский</div>
+    								<div class="speakers__popup-text">Директор по развитию компании Мегафон</div>
+   							 </div>
+   							 <div class="speakers__popup-content">
+   							 	<p>Как менять жизнь людей через спорт? Директор adidas Academy поделится примером создания благополучия для сотрудников компании. Опыт adidas Academy применим в любой спортивной организации. Насколько важно Ваше образование при запуске проекта: директор adidas Academy - Кандидат медицинских наук, врач-психиатр, психотерапевт, держатель Европейского и Всемирного Сертификата по Психотерапии, член совета директоров Всемирной Ассоциации Позитивной и Транскультуральной Психотерапии (WAPP), международный тренер по Позитивной и Транскультуральной Психотерапии, автор книг и научных статей. Вы узнаете, что нужно для успешного запуска проекта и как донести до людей, что занятия спортом помогают им достигать целей в бизнесе. Итогом мастер-класса Максима Гончарова станет формирование правильного посыла и умение донести до Ваших клиентов то, что занятия именно Вашим видом спорта, именно в Вашем спортивном сооружении запустят позитивные изменения в жизни каждого человека, через энергию спорта.</p>
+   							 </div>
+							</div>
 						</div>
 					</div>
 				</a>
-				<a href="#" class="speakers__item">
+				<a data-fancybox="speaker3" href="#speaker3" class="speakers__item">
 					<picture class="speakers__item-img">
 						<source data-lazy-load="img/img-speakers.webp" srcset="img/0.svg" type="image/webp">
 						<img data-lazy-load="img/img-speakers.png" src="img/0.svg" alt="">
@@ -521,22 +526,24 @@
 					<div class="speakers__item-title">Константин Константинопольский</div>
 					<div class="speakers__item-text">Директор по развитию компании Мегафон</div>
 					<div class="speakers__item-hidden">
-						<div class="speakers__popup">
-							 <div class="speakers__popup-person">
-								 <picture class="speakers__popup-img">
- 									<source data-lazy-load="img/img-speakers.webp" srcset="img/0.svg" type="image/webp">
- 									<img data-lazy-load="img/img-speakers.png" src="img/0.svg" alt="">
- 								</picture>
- 								<div class="speakers__popup-title">Константин Константинопольский</div>
- 								<div class="speakers__popup-text">Директор по развитию компании Мегафон</div>
-							 </div>
-							 <div class="speakers__popup-content">
-							 	<p>Как менять жизнь людей через спорт? Директор adidas Academy поделится примером создания благополучия для сотрудников компании. Опыт adidas Academy применим в любой спортивной организации. Насколько важно Ваше образование при запуске проекта: директор adidas Academy - Кандидат медицинских наук, врач-психиатр, психотерапевт, держатель Европейского и Всемирного Сертификата по Психотерапии, член совета директоров Всемирной Ассоциации Позитивной и Транскультуральной Психотерапии (WAPP), международный тренер по Позитивной и Транскультуральной Психотерапии, автор книг и научных статей. Вы узнаете, что нужно для успешного запуска проекта и как донести до людей, что занятия спортом помогают им достигать целей в бизнесе. Итогом мастер-класса Максима Гончарова станет формирование правильного посыла и умение донести до Ваших клиентов то, что занятия именно Вашим видом спорта, именно в Вашем спортивном сооружении запустят позитивные изменения в жизни каждого человека, через энергию спорта.</p>
-							 </div>
+						<div id="speaker3" class="speakers__popup">
+							<div class="speakers__popup-box">
+								<div class="speakers__popup-person">
+   								    <picture class="speakers__popup-img">
+    									<source data-lazy-load="img/img-speakers.webp" srcset="img/0.svg" type="image/webp">
+    									<img data-lazy-load="img/img-speakers.png" src="img/0.svg" alt="">
+    								</picture>
+    								<div class="speakers__popup-title">Константин Константинопольский</div>
+    								<div class="speakers__popup-text">Директор по развитию компании Мегафон</div>
+   							 </div>
+   							 <div class="speakers__popup-content">
+   							 	<p>Как менять жизнь людей через спорт? Директор adidas Academy поделится примером создания благополучия для сотрудников компании. Опыт adidas Academy применим в любой спортивной организации. Насколько важно Ваше образование при запуске проекта: директор adidas Academy - Кандидат медицинских наук, врач-психиатр, психотерапевт, держатель Европейского и Всемирного Сертификата по Психотерапии, член совета директоров Всемирной Ассоциации Позитивной и Транскультуральной Психотерапии (WAPP), международный тренер по Позитивной и Транскультуральной Психотерапии, автор книг и научных статей. Вы узнаете, что нужно для успешного запуска проекта и как донести до людей, что занятия спортом помогают им достигать целей в бизнесе. Итогом мастер-класса Максима Гончарова станет формирование правильного посыла и умение донести до Ваших клиентов то, что занятия именно Вашим видом спорта, именно в Вашем спортивном сооружении запустят позитивные изменения в жизни каждого человека, через энергию спорта.</p>
+   							 </div>
+							</div>
 						</div>
 					</div>
 				</a>
-				<a href="#" class="speakers__item">
+				<a data-fancybox="speaker4" href="#speaker4" class="speakers__item">
 					<picture class="speakers__item-img">
 						<source data-lazy-load="img/img-speakers.webp" srcset="img/0.svg" type="image/webp">
 						<img data-lazy-load="img/img-speakers.png" src="img/0.svg" alt="">
@@ -544,22 +551,24 @@
 					<div class="speakers__item-title">Константин Константинопольский</div>
 					<div class="speakers__item-text">Директор по развитию компании Мегафон</div>
 					<div class="speakers__item-hidden">
-						<div class="speakers__popup">
-							 <div class="speakers__popup-person">
-								 <picture class="speakers__popup-img">
- 									<source data-lazy-load="img/img-speakers.webp" srcset="img/0.svg" type="image/webp">
- 									<img data-lazy-load="img/img-speakers.png" src="img/0.svg" alt="">
- 								</picture>
- 								<div class="speakers__popup-title">Константин Константинопольский</div>
- 								<div class="speakers__popup-text">Директор по развитию компании Мегафон</div>
-							 </div>
-							 <div class="speakers__popup-content">
-							 	<p>Как менять жизнь людей через спорт? Директор adidas Academy поделится примером создания благополучия для сотрудников компании. Опыт adidas Academy применим в любой спортивной организации. Насколько важно Ваше образование при запуске проекта: директор adidas Academy - Кандидат медицинских наук, врач-психиатр, психотерапевт, держатель Европейского и Всемирного Сертификата по Психотерапии, член совета директоров Всемирной Ассоциации Позитивной и Транскультуральной Психотерапии (WAPP), международный тренер по Позитивной и Транскультуральной Психотерапии, автор книг и научных статей. Вы узнаете, что нужно для успешного запуска проекта и как донести до людей, что занятия спортом помогают им достигать целей в бизнесе. Итогом мастер-класса Максима Гончарова станет формирование правильного посыла и умение донести до Ваших клиентов то, что занятия именно Вашим видом спорта, именно в Вашем спортивном сооружении запустят позитивные изменения в жизни каждого человека, через энергию спорта.</p>
-							 </div>
+						<div id="speaker4" class="speakers__popup">
+							<div class="speakers__popup-box">
+								<div class="speakers__popup-person">
+   								    <picture class="speakers__popup-img">
+    									<source data-lazy-load="img/img-speakers.webp" srcset="img/0.svg" type="image/webp">
+    									<img data-lazy-load="img/img-speakers.png" src="img/0.svg" alt="">
+    								</picture>
+    								<div class="speakers__popup-title">Константин Константинопольский</div>
+    								<div class="speakers__popup-text">Директор по развитию компании Мегафон</div>
+   							 </div>
+   							 <div class="speakers__popup-content">
+   							 	<p>Как менять жизнь людей через спорт? Директор adidas Academy поделится примером создания благополучия для сотрудников компании. Опыт adidas Academy применим в любой спортивной организации. Насколько важно Ваше образование при запуске проекта: директор adidas Academy - Кандидат медицинских наук, врач-психиатр, психотерапевт, держатель Европейского и Всемирного Сертификата по Психотерапии, член совета директоров Всемирной Ассоциации Позитивной и Транскультуральной Психотерапии (WAPP), международный тренер по Позитивной и Транскультуральной Психотерапии, автор книг и научных статей. Вы узнаете, что нужно для успешного запуска проекта и как донести до людей, что занятия спортом помогают им достигать целей в бизнесе. Итогом мастер-класса Максима Гончарова станет формирование правильного посыла и умение донести до Ваших клиентов то, что занятия именно Вашим видом спорта, именно в Вашем спортивном сооружении запустят позитивные изменения в жизни каждого человека, через энергию спорта.</p>
+   							 </div>
+							</div>
 						</div>
 					</div>
 				</a>
-				<a href="#" class="speakers__item">
+				<a data-fancybox="speaker5" href="#speaker5" class="speakers__item">
 					<picture class="speakers__item-img">
 						<source data-lazy-load="img/img-speakers.webp" srcset="img/0.svg" type="image/webp">
 						<img data-lazy-load="img/img-speakers.png" src="img/0.svg" alt="">
@@ -567,22 +576,24 @@
 					<div class="speakers__item-title">Константин Константинопольский</div>
 					<div class="speakers__item-text">Директор по развитию компании Мегафон</div>
 					<div class="speakers__item-hidden">
-						<div class="speakers__popup">
-							 <div class="speakers__popup-person">
-								 <picture class="speakers__popup-img">
- 									<source data-lazy-load="img/img-speakers.webp" srcset="img/0.svg" type="image/webp">
- 									<img data-lazy-load="img/img-speakers.png" src="img/0.svg" alt="">
- 								</picture>
- 								<div class="speakers__popup-title">Константин Константинопольский</div>
- 								<div class="speakers__popup-text">Директор по развитию компании Мегафон</div>
-							 </div>
-							 <div class="speakers__popup-content">
-							 	<p>Как менять жизнь людей через спорт? Директор adidas Academy поделится примером создания благополучия для сотрудников компании. Опыт adidas Academy применим в любой спортивной организации. Насколько важно Ваше образование при запуске проекта: директор adidas Academy - Кандидат медицинских наук, врач-психиатр, психотерапевт, держатель Европейского и Всемирного Сертификата по Психотерапии, член совета директоров Всемирной Ассоциации Позитивной и Транскультуральной Психотерапии (WAPP), международный тренер по Позитивной и Транскультуральной Психотерапии, автор книг и научных статей. Вы узнаете, что нужно для успешного запуска проекта и как донести до людей, что занятия спортом помогают им достигать целей в бизнесе. Итогом мастер-класса Максима Гончарова станет формирование правильного посыла и умение донести до Ваших клиентов то, что занятия именно Вашим видом спорта, именно в Вашем спортивном сооружении запустят позитивные изменения в жизни каждого человека, через энергию спорта.</p>
-							 </div>
+						<div id="speaker5" class="speakers__popup">
+							<div class="speakers__popup-box">
+								<div class="speakers__popup-person">
+   								    <picture class="speakers__popup-img">
+    									<source data-lazy-load="img/img-speakers.webp" srcset="img/0.svg" type="image/webp">
+    									<img data-lazy-load="img/img-speakers.png" src="img/0.svg" alt="">
+    								</picture>
+    								<div class="speakers__popup-title">Константин Константинопольский</div>
+    								<div class="speakers__popup-text">Директор по развитию компании Мегафон</div>
+   							 </div>
+   							 <div class="speakers__popup-content">
+   							 	<p>Как менять жизнь людей через спорт? Директор adidas Academy поделится примером создания благополучия для сотрудников компании. Опыт adidas Academy применим в любой спортивной организации. Насколько важно Ваше образование при запуске проекта: директор adidas Academy - Кандидат медицинских наук, врач-психиатр, психотерапевт, держатель Европейского и Всемирного Сертификата по Психотерапии, член совета директоров Всемирной Ассоциации Позитивной и Транскультуральной Психотерапии (WAPP), международный тренер по Позитивной и Транскультуральной Психотерапии, автор книг и научных статей. Вы узнаете, что нужно для успешного запуска проекта и как донести до людей, что занятия спортом помогают им достигать целей в бизнесе. Итогом мастер-класса Максима Гончарова станет формирование правильного посыла и умение донести до Ваших клиентов то, что занятия именно Вашим видом спорта, именно в Вашем спортивном сооружении запустят позитивные изменения в жизни каждого человека, через энергию спорта.</p>
+   							 </div>
+							</div>
 						</div>
 					</div>
 				</a>
-				<a href="#" class="speakers__item">
+				<a data-fancybox="speaker6" href="#speaker6" class="speakers__item">
 					<picture class="speakers__item-img">
 						<source data-lazy-load="img/img-speakers.webp" srcset="img/0.svg" type="image/webp">
 						<img data-lazy-load="img/img-speakers.png" src="img/0.svg" alt="">
@@ -590,22 +601,24 @@
 					<div class="speakers__item-title">Константин Константинопольский</div>
 					<div class="speakers__item-text">Директор по развитию компании Мегафон</div>
 					<div class="speakers__item-hidden">
-						<div class="speakers__popup">
-							 <div class="speakers__popup-person">
-								 <picture class="speakers__popup-img">
- 									<source data-lazy-load="img/img-speakers.webp" srcset="img/0.svg" type="image/webp">
- 									<img data-lazy-load="img/img-speakers.png" src="img/0.svg" alt="">
- 								</picture>
- 								<div class="speakers__popup-title">Константин Константинопольский</div>
- 								<div class="speakers__popup-text">Директор по развитию компании Мегафон</div>
-							 </div>
-							 <div class="speakers__popup-content">
-							 	<p>Как менять жизнь людей через спорт? Директор adidas Academy поделится примером создания благополучия для сотрудников компании. Опыт adidas Academy применим в любой спортивной организации. Насколько важно Ваше образование при запуске проекта: директор adidas Academy - Кандидат медицинских наук, врач-психиатр, психотерапевт, держатель Европейского и Всемирного Сертификата по Психотерапии, член совета директоров Всемирной Ассоциации Позитивной и Транскультуральной Психотерапии (WAPP), международный тренер по Позитивной и Транскультуральной Психотерапии, автор книг и научных статей. Вы узнаете, что нужно для успешного запуска проекта и как донести до людей, что занятия спортом помогают им достигать целей в бизнесе. Итогом мастер-класса Максима Гончарова станет формирование правильного посыла и умение донести до Ваших клиентов то, что занятия именно Вашим видом спорта, именно в Вашем спортивном сооружении запустят позитивные изменения в жизни каждого человека, через энергию спорта.</p>
-							 </div>
+						<div id="speaker6" class="speakers__popup">
+							<div class="speakers__popup-box">
+								<div class="speakers__popup-person">
+   								    <picture class="speakers__popup-img">
+    									<source data-lazy-load="img/img-speakers.webp" srcset="img/0.svg" type="image/webp">
+    									<img data-lazy-load="img/img-speakers.png" src="img/0.svg" alt="">
+    								</picture>
+    								<div class="speakers__popup-title">Константин Константинопольский</div>
+    								<div class="speakers__popup-text">Директор по развитию компании Мегафон</div>
+   							 </div>
+   							 <div class="speakers__popup-content">
+   							 	<p>Как менять жизнь людей через спорт? Директор adidas Academy поделится примером создания благополучия для сотрудников компании. Опыт adidas Academy применим в любой спортивной организации. Насколько важно Ваше образование при запуске проекта: директор adidas Academy - Кандидат медицинских наук, врач-психиатр, психотерапевт, держатель Европейского и Всемирного Сертификата по Психотерапии, член совета директоров Всемирной Ассоциации Позитивной и Транскультуральной Психотерапии (WAPP), международный тренер по Позитивной и Транскультуральной Психотерапии, автор книг и научных статей. Вы узнаете, что нужно для успешного запуска проекта и как донести до людей, что занятия спортом помогают им достигать целей в бизнесе. Итогом мастер-класса Максима Гончарова станет формирование правильного посыла и умение донести до Ваших клиентов то, что занятия именно Вашим видом спорта, именно в Вашем спортивном сооружении запустят позитивные изменения в жизни каждого человека, через энергию спорта.</p>
+   							 </div>
+							</div>
 						</div>
 					</div>
 				</a>
-				<a href="#" class="speakers__item">
+				<a data-fancybox="speaker7" href="#speaker7" class="speakers__item">
 					<picture class="speakers__item-img">
 						<source data-lazy-load="img/img-speakers.webp" srcset="img/0.svg" type="image/webp">
 						<img data-lazy-load="img/img-speakers.png" src="img/0.svg" alt="">
@@ -613,22 +626,24 @@
 					<div class="speakers__item-title">Константин Константинопольский</div>
 					<div class="speakers__item-text">Директор по развитию компании Мегафон</div>
 					<div class="speakers__item-hidden">
-						<div class="speakers__popup">
-							 <div class="speakers__popup-person">
-								 <picture class="speakers__popup-img">
- 									<source data-lazy-load="img/img-speakers.webp" srcset="img/0.svg" type="image/webp">
- 									<img data-lazy-load="img/img-speakers.png" src="img/0.svg" alt="">
- 								</picture>
- 								<div class="speakers__popup-title">Константин Константинопольский</div>
- 								<div class="speakers__popup-text">Директор по развитию компании Мегафон</div>
-							 </div>
-							 <div class="speakers__popup-content">
-							 	<p>Как менять жизнь людей через спорт? Директор adidas Academy поделится примером создания благополучия для сотрудников компании. Опыт adidas Academy применим в любой спортивной организации. Насколько важно Ваше образование при запуске проекта: директор adidas Academy - Кандидат медицинских наук, врач-психиатр, психотерапевт, держатель Европейского и Всемирного Сертификата по Психотерапии, член совета директоров Всемирной Ассоциации Позитивной и Транскультуральной Психотерапии (WAPP), международный тренер по Позитивной и Транскультуральной Психотерапии, автор книг и научных статей. Вы узнаете, что нужно для успешного запуска проекта и как донести до людей, что занятия спортом помогают им достигать целей в бизнесе. Итогом мастер-класса Максима Гончарова станет формирование правильного посыла и умение донести до Ваших клиентов то, что занятия именно Вашим видом спорта, именно в Вашем спортивном сооружении запустят позитивные изменения в жизни каждого человека, через энергию спорта.</p>
-							 </div>
+						<div id="speaker7" class="speakers__popup">
+							<div class="speakers__popup-box">
+								<div class="speakers__popup-person">
+   								    <picture class="speakers__popup-img">
+    									<source data-lazy-load="img/img-speakers.webp" srcset="img/0.svg" type="image/webp">
+    									<img data-lazy-load="img/img-speakers.png" src="img/0.svg" alt="">
+    								</picture>
+    								<div class="speakers__popup-title">Константин Константинопольский</div>
+    								<div class="speakers__popup-text">Директор по развитию компании Мегафон</div>
+   							 </div>
+   							 <div class="speakers__popup-content">
+   							 	<p>Как менять жизнь людей через спорт? Директор adidas Academy поделится примером создания благополучия для сотрудников компании. Опыт adidas Academy применим в любой спортивной организации. Насколько важно Ваше образование при запуске проекта: директор adidas Academy - Кандидат медицинских наук, врач-психиатр, психотерапевт, держатель Европейского и Всемирного Сертификата по Психотерапии, член совета директоров Всемирной Ассоциации Позитивной и Транскультуральной Психотерапии (WAPP), международный тренер по Позитивной и Транскультуральной Психотерапии, автор книг и научных статей. Вы узнаете, что нужно для успешного запуска проекта и как донести до людей, что занятия спортом помогают им достигать целей в бизнесе. Итогом мастер-класса Максима Гончарова станет формирование правильного посыла и умение донести до Ваших клиентов то, что занятия именно Вашим видом спорта, именно в Вашем спортивном сооружении запустят позитивные изменения в жизни каждого человека, через энергию спорта.</p>
+   							 </div>
+							</div>
 						</div>
 					</div>
 				</a>
-				<a href="#" class="speakers__item">
+				<a data-fancybox="speaker8" href="#speaker8" class="speakers__item">
 					<picture class="speakers__item-img">
 						<source data-lazy-load="img/img-speakers.webp" srcset="img/0.svg" type="image/webp">
 						<img data-lazy-load="img/img-speakers.png" src="img/0.svg" alt="">
@@ -636,18 +651,20 @@
 					<div class="speakers__item-title">Константин Константинопольский</div>
 					<div class="speakers__item-text">Директор по развитию компании Мегафон</div>
 					<div class="speakers__item-hidden">
-						<div class="speakers__popup">
-							 <div class="speakers__popup-person">
-								 <picture class="speakers__popup-img">
-									<source data-lazy-load="img/img-speakers.webp" srcset="img/0.svg" type="image/webp">
-									<img data-lazy-load="img/img-speakers.png" src="img/0.svg" alt="">
-								</picture>
-								<div class="speakers__popup-title">Константин Константинопольский</div>
-								<div class="speakers__popup-text">Директор по развитию компании Мегафон</div>
-							 </div>
-							 <div class="speakers__popup-content">
-								<p>Как менять жизнь людей через спорт? Директор adidas Academy поделится примером создания благополучия для сотрудников компании. Опыт adidas Academy применим в любой спортивной организации. Насколько важно Ваше образование при запуске проекта: директор adidas Academy - Кандидат медицинских наук, врач-психиатр, психотерапевт, держатель Европейского и Всемирного Сертификата по Психотерапии, член совета директоров Всемирной Ассоциации Позитивной и Транскультуральной Психотерапии (WAPP), международный тренер по Позитивной и Транскультуральной Психотерапии, автор книг и научных статей. Вы узнаете, что нужно для успешного запуска проекта и как донести до людей, что занятия спортом помогают им достигать целей в бизнесе. Итогом мастер-класса Максима Гончарова станет формирование правильного посыла и умение донести до Ваших клиентов то, что занятия именно Вашим видом спорта, именно в Вашем спортивном сооружении запустят позитивные изменения в жизни каждого человека, через энергию спорта.</p>
-							 </div>
+						<div id="speaker8" class="speakers__popup">
+							<div class="speakers__popup-box">
+								<div class="speakers__popup-person">
+   								    <picture class="speakers__popup-img">
+    									<source data-lazy-load="img/img-speakers.webp" srcset="img/0.svg" type="image/webp">
+    									<img data-lazy-load="img/img-speakers.png" src="img/0.svg" alt="">
+    								</picture>
+    								<div class="speakers__popup-title">Константин Константинопольский</div>
+    								<div class="speakers__popup-text">Директор по развитию компании Мегафон</div>
+   							 </div>
+   							 <div class="speakers__popup-content">
+   							 	<p>Как менять жизнь людей через спорт? Директор adidas Academy поделится примером создания благополучия для сотрудников компании. Опыт adidas Academy применим в любой спортивной организации. Насколько важно Ваше образование при запуске проекта: директор adidas Academy - Кандидат медицинских наук, врач-психиатр, психотерапевт, держатель Европейского и Всемирного Сертификата по Психотерапии, член совета директоров Всемирной Ассоциации Позитивной и Транскультуральной Психотерапии (WAPP), международный тренер по Позитивной и Транскультуральной Психотерапии, автор книг и научных статей. Вы узнаете, что нужно для успешного запуска проекта и как донести до людей, что занятия спортом помогают им достигать целей в бизнесе. Итогом мастер-класса Максима Гончарова станет формирование правильного посыла и умение донести до Ваших клиентов то, что занятия именно Вашим видом спорта, именно в Вашем спортивном сооружении запустят позитивные изменения в жизни каждого человека, через энергию спорта.</p>
+   							 </div>
+							</div>
 						</div>
 					</div>
 				</a>
@@ -655,7 +672,7 @@
 		</div>
 	</section>
 
-	<section class="draft">
+	<section id="draft" class="draft">
 		<div class="container">
 			<div class="draft__box">
 				<div class="draft__content">
@@ -668,7 +685,7 @@
 				<form class="draft__form">
 					<div class="draft__form-title">Заполните форму и получите драфт программы одним из первых</div>
 					<input type="text" class="draft__form-field" placeholder="Ваше имя">
-					<input type="text" class="draft__form-field" placeholder="Ваш телефон">
+					<input type="tel" class="draft__form-field" placeholder="Ваш телефон">
 					<input type="text" class="draft__form-field" placeholder="Ваша компания">
 					<input type="email" class="draft__form-field" placeholder="Ваш email">
 					<label class="draft__form-check">
@@ -684,7 +701,7 @@
 		</div>
 	</section>
 
-	<section class="about">
+	<section id="about" class="about">
 		<div class="container">
 			<h2 class="title">О нас говорят</h2>
 			<div class="about__box">
@@ -718,7 +735,7 @@
 		</div>
 	</section>
 
-	<section class="cost">
+	<section id="cost" class="cost">
 		<div class="container cost__container">
 			<h2 class="title">Цена вопроса</h2>
 			<div class="cost__box">
@@ -810,7 +827,7 @@
 		</div>
 	</section>
 
-	<section class="place">
+	<section id="place" class="place">
 		<div class="container">
 			<div class="place__box">
 				<div class="place__content">
@@ -828,7 +845,7 @@
 		<div id="map" class="place__map"></div>
 	</section>
 
-	<section class="parthners">
+	<section id="parthners" class="parthners">
 		<div class="container">
 			<h2 class="title">Партнеры</h2>
 			<div class="parthners__box">
@@ -871,7 +888,7 @@
 		</div>
 	</section>
 
-	<section class="direction">
+	<section id="direction" class="direction">
 		<div class="container">
 			<h2 class="title">Дирекция</h2>
 			<div class="direction__box">
@@ -957,7 +974,7 @@
 		</div>
 	</section>
 
-	<section class="events">
+	<section id="events" class="events">
 		<picture class="events__background">
 			<source data-lazy-load="img/bg-events.webp" srcset="img/0.svg" type="image/webp">
 			<img data-lazy-load="img/bg-events.png" src="img/0.svg" alt="">
@@ -1001,11 +1018,22 @@
 
 	<div hidden>
 
-		<!-- SVG SPRITE -->
-		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-			<symbol id="icon-id" viewBox="0 0 512 512">
-			</symbol>
-		</svg>
+		<!-- POPUP -->
+
+		<form id="popup" class="popup">
+			<div class="popup__form-title">Оставьте заявку на участие</div>
+			<input type="text" class="popup__form-field" placeholder="Ваше имя">
+			<input type="tel" class="popup__form-field" placeholder="Ваш телефон">
+			<input type="email" class="popup__form-field" placeholder="Ваш email">
+			<label class="popup__form-check">
+				<input type="checkbox">
+				<span>Я согласен с политикой конфиденциальности</span>
+			</label>
+			<div class="popup__form-button">
+				<button type="submit" class="button">Отправить</button>
+			</div>
+			<div class="popup__form-text">Обработка персональных данных осуществляется согласно ФЗ РФ от 27 июля 2006 г. № 152-ФЗ</div>
+		</form>
 	</div>
 
 	<!-- Load Scripts Start -->
